@@ -1,5 +1,5 @@
 server:
-  port: 0 # Random Port
+  port: 8090 # Random Port
 spring:
   application:
     name: msa-board-api-test
@@ -11,3 +11,9 @@ eureka:
       defaultZone: http://localhost:8761/eureka
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+logging:
+  level:
+    root: info
+    org.springframework.security: DEBUG
+    org.springframework.cloud.gateway: DEBUG
