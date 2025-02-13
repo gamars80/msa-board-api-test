@@ -75,8 +75,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     public static String getRolesFromToken(String token) {
         Claims claims = getClaimsFromToken(token);
-
-        // roles 클레임을 리스트로 변환
+        // role 클레임을 String으로 변환
         return claims.get("role", String.class); // "roles"는 클레임 키 이름
     }
 
